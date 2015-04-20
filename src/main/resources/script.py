@@ -8,3 +8,8 @@ def returnIntegerArray():
 
 def returnStringStringMap():
     return {'a': 'b', 'c': 'd'}
+
+
+def returnStringBooleanMap():
+    return {'a': True, 'b': False}
+

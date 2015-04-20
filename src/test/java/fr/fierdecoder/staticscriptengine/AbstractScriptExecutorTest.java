@@ -46,4 +46,9 @@ public abstract class AbstractScriptExecutorTest {
     public void shouldReturnStringStringMap() throws ScriptExecutorException {
         assertThat(scriptExecutor.returnStringStringMap()).contains(entry("a", "b"), entry("c", "d"));
     }
+
+    @Test
+    public void shouldReturnStringBooleanMap() throws ScriptExecutorException {
+        assertThat(scriptExecutor.returnStringBooleanMap()).contains(entry("a", true), entry("b", false));
+    }
 }

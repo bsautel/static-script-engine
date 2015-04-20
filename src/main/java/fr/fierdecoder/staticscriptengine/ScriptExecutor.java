@@ -40,4 +40,13 @@ public class ScriptExecutor {
             throw new ScriptExecutorException(e);
         }
     }
+
+    public Map<String, Boolean> returnStringBooleanMap() throws ScriptExecutorException {
+        try {
+            Object result = invocable.invokeFunction("returnStringBooleanMap");
+            return scriptEngineResultConverter.convertMap(result, String.class, Boolean.class);
+        } catch (ScriptException | NoSuchMethodException e) {
+            throw new ScriptExecutorException(e);
+        }
+    }
 }
