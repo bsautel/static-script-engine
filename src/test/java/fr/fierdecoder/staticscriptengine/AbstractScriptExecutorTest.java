@@ -33,13 +33,18 @@ public abstract class AbstractScriptExecutorTest {
     }
 
     @Test
+    public void shouldReturnABoolean() throws ScriptExecutorException {
+        assertThat(scriptExecutor.returnBoolean()).isTrue();
+    }
+
+    @Test
     public void shouldReturnAString() throws ScriptExecutorException {
         assertThat(scriptExecutor.returnString()).isEqualTo("Hello World!");
     }
 
-    @Test
-    public void shouldReturnABoolean() throws ScriptExecutorException {
-        assertThat(scriptExecutor.returnBoolean()).isTrue();
+    @Test(expected = ScriptExecutorException.class)
+    public void shouldThrowAnErrorWhenReturningABooleanAsString() throws ScriptExecutorException {
+        scriptExecutor.returnBooleanAsString();
     }
 
     @Test
