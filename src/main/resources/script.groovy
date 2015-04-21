@@ -6,6 +6,9 @@ def returnString() {
     return 'Hello World!'
 }
 
+def returnVoid() {
+}
+
 def returnStringArray() {
     return ['a', 'b']
 }

@@ -5,6 +5,9 @@ def returnBoolean():
 def returnString():
     return 'Hello World!'
 
+def returnVoid():
+    pass
+
 
 def returnStringArray():
     return ['a', 'b']

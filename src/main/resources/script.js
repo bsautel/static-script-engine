@@ -6,6 +6,9 @@ function returnString() {
     return 'Hello World!';
 }
 
+function returnVoid() {
+}
+
 function returnStringArray() {
     return ['a', 'b'];
 }

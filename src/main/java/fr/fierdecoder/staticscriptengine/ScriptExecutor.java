@@ -41,6 +41,15 @@ public class ScriptExecutor {
         }
     }
 
+    public String returnVoidAsString() {
+        try {
+            Object result = invocable.invokeFunction("returnVoid");
+            return scriptEngineResultConverter.convertToType(result, String.class);
+        } catch (ScriptException | NoSuchMethodException e) {
+            throw new ScriptExecutorException(e);
+        }
+    }
+
     public List<String> returnStringArray() throws ScriptExecutorException {
         try {
             Object result = invocable.invokeFunction("returnStringArray");

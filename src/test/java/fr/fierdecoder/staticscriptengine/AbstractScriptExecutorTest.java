@@ -47,6 +47,11 @@ public abstract class AbstractScriptExecutorTest {
         scriptExecutor.returnBooleanAsString();
     }
 
+    @Test(expected = ScriptExecutorException.class)
+    public void shouldReturnVoidAString() throws ScriptExecutorException {
+        scriptExecutor.returnVoidAsString();
+    }
+
     @Test
     public void shouldReturnAStringArray() throws ScriptExecutorException {
         assertThat(scriptExecutor.returnStringArray()).containsExactly("a", "b");

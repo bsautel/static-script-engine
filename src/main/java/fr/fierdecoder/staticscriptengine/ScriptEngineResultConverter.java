@@ -12,6 +12,9 @@ import static java.util.stream.Collectors.toMap;
 
 public class ScriptEngineResultConverter {
     public <T> T convertToType(Object value, Class<T> type) {
+        if (value == null) {
+            throw new ScriptExecutorException("null result");
+        }
         if (type.isAssignableFrom(value.getClass())) {
             return (T) value;
         }
