@@ -1,6 +1,4 @@
-package fr.fierdecoder.staticscriptengine;
-
-import javax.script.ScriptEngine;
+package fr.fierdecoder.staticscriptengine.typing;
 
 public class NashornScriptExecutorTest extends AbstractScriptExecutorTest {
 

@@ -1,4 +1,4 @@
-package fr.fierdecoder.staticscriptengine;
+package fr.fierdecoder.staticscriptengine.typing;
 
 import jdk.nashorn.api.scripting.ScriptObjectMirror;
 

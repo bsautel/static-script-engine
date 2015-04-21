@@ -1,4 +1,4 @@
-package fr.fierdecoder.staticscriptengine;
+package fr.fierdecoder.staticscriptengine.typing;
 
 public class ScriptExecutorException extends RuntimeException {
     public ScriptExecutorException(Exception cause) {
