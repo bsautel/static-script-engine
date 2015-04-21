@@ -14,6 +14,24 @@ public class ScriptExecutor {
         scriptEngineResultConverter = new ScriptEngineResultConverter();
     }
 
+    public boolean returnBoolean() throws ScriptExecutorException {
+        try {
+            Object result = invocable.invokeFunction("returnBoolean");
+            return (boolean) result;
+        } catch (ScriptException | NoSuchMethodException e) {
+            throw new ScriptExecutorException(e);
+        }
+    }
+
+    public String returnString() throws ScriptExecutorException {
+        try {
+            Object result = invocable.invokeFunction("returnString");
+            return (String) result;
+        } catch (ScriptException | NoSuchMethodException e) {
+            throw new ScriptExecutorException(e);
+        }
+    }
+
     public List<String> returnStringArray() throws ScriptExecutorException {
         try {
             Object result = invocable.invokeFunction("returnStringArray");

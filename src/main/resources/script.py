@@ -1,3 +1,11 @@
+def returnBoolean():
+    return True
+
+
+def returnString():
+    return 'Hello World!'
+
+
 def returnStringArray():
     return ['a', 'b']
 
