@@ -1,4 +1,0 @@
-package ${packageName};
-
-class ${className} implements ${interfaceName} {
-}

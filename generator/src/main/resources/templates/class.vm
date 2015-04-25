@@ -1,0 +1,15 @@
+package ${packageName};
+
+import javax.script.Invocable;
+import javax.script.ScriptException;
+
+class ${className} implements ${interfaceName} {
+    private final Invocable invocable;
+
+    public ${className}(Invocable invocable) {
+        this.invocable = invocable;
+    }
+#foreach ($method in $methods)
+
+${method}#end
+}
