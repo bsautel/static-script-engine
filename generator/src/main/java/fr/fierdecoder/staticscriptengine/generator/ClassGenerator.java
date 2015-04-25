@@ -16,6 +16,7 @@ import java.io.Writer;
 import java.util.List;
 
 import static java.util.stream.Collectors.toList;
+import static javax.lang.model.element.Modifier.STATIC;
 import static javax.lang.model.util.ElementFilter.methodsIn;
 
 public class ClassGenerator {
@@ -49,6 +50,7 @@ public class ClassGenerator {
     private List<String> generateMethodsImplementations(TypeElement typeElement) {
         List<ExecutableElement> methods = methodsIn(typeElement.getEnclosedElements());
         return methods.stream()
+                .filter(method -> !method.getModifiers().contains(STATIC))
                 .map(methodGenerator::generateMethod)
                 .collect(toList());
     }
