@@ -1,7 +1,7 @@
     @Override
     public ${returnType} ${methodName}(${parameters}) {
         try {
-            #if (!$isVoid) return (${returnType}) #end invocable.invokeFunction("${methodName}"${invocationParameters});
+            #if (!$isVoid) return (${returnType})#end invocable.invokeFunction("${methodName}"${invocationParameters});
         } catch (ScriptException e) {
             throw new RuntimeException(e);
         } catch (NoSuchMethodException e) {
