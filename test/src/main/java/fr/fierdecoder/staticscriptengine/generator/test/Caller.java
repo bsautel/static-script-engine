@@ -11,9 +11,11 @@ import java.util.List;
 public interface Caller {
     void voidMethod();
 
-    void voidMethodWithParameters(@FunctionName String param1, int param2);
+    void voidMethodWithParameters(String param1, int param2);
 
     String stringMethod();
+
+    String stringMethodWithParametersIncludingOneThatDefinesFunctionName(@FunctionName String param1, int param2);
 
     List<String> listMethod();
 
