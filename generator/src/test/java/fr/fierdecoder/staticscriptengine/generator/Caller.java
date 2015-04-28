@@ -1,4 +1,4 @@
-package fr.fierdecoder.staticscriptengine.generator.test;
+package fr.fierdecoder.staticscriptengine.generator;
 
 import fr.fierdecoder.staticscriptengine.annotation.FunctionName;
 import fr.fierdecoder.staticscriptengine.annotation.StaticScriptInvocator;

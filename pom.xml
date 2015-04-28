@@ -13,7 +13,6 @@
     <modules>
         <module>typing</module>
         <module>generator</module>
-        <module>test</module>
     </modules>
 
     <dependencies>

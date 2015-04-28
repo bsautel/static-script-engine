@@ -1,4 +1,4 @@
-package fr.fierdecoder.staticscriptengine.generator.test;
+package fr.fierdecoder.staticscriptengine.generator;
 
 import org.junit.Before;
 import org.junit.Test;
