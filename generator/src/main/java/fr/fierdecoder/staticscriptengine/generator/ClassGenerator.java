@@ -41,6 +41,7 @@ public class ClassGenerator {
         velocityContext.put("className", className);
         velocityContext.put("interfaceName", interfaceName);
         velocityContext.put("methods", methods);
+        velocityContext.put("generatorClassName", StaticScriptInvocatorProcessor.class.getCanonicalName());
         JavaFileObject javaFile = filer.createSourceFile(packageName + "." + className);
         Writer writer = javaFile.openWriter();
         template.merge(velocityContext, writer);

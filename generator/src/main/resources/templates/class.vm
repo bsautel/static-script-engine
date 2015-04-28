@@ -2,7 +2,9 @@ package ${packageName};
 
 import javax.script.Invocable;
 import javax.script.ScriptException;
+import javax.annotation.Generated;
 
+@Generated("${generatorClassName}")
 class ${className} implements ${interfaceName} {
     private final Invocable invocable;
 
