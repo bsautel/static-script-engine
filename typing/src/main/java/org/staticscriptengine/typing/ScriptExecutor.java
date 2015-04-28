@@ -1,4 +1,4 @@
-package fr.fierdecoder.staticscriptengine.typing;
+package org.staticscriptengine.typing;
 
 import javax.script.Invocable;
 import javax.script.ScriptException;

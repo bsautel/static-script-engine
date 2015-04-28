@@ -1,4 +1,4 @@
-package fr.fierdecoder.staticscriptengine.typing;
+package org.staticscriptengine.typing;
 
 public class GroovyScriptExecutorTest extends AbstractScriptExecutorTest {
     public GroovyScriptExecutorTest() {

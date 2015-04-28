@@ -1,6 +1,6 @@
-package fr.fierdecoder.staticscriptengine.generator;
+package org.staticscriptengine.generator;
 
-import fr.fierdecoder.staticscriptengine.annotation.FunctionName;
+import org.staticscriptengine.annotation.FunctionName;
 import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;

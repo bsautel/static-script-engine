@@ -1,4 +1,4 @@
-package fr.fierdecoder.staticscriptengine.typing;
+package org.staticscriptengine.typing;
 
 public class PythonScriptExecutorTest extends AbstractScriptExecutorTest {
     public PythonScriptExecutorTest() {

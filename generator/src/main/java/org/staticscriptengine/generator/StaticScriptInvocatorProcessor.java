@@ -1,7 +1,7 @@
-package fr.fierdecoder.staticscriptengine.generator;
+package org.staticscriptengine.generator;
 
 import com.google.auto.service.AutoService;
-import fr.fierdecoder.staticscriptengine.annotation.StaticScriptInvocator;
+import org.staticscriptengine.annotation.StaticScriptInvocator;
 import org.apache.velocity.app.VelocityEngine;
 
 import javax.annotation.processing.*;
@@ -17,7 +17,7 @@ import static javax.tools.Diagnostic.Kind.ERROR;
 import static javax.tools.Diagnostic.Kind.NOTE;
 
 @AutoService(Processor.class)
-@SupportedAnnotationTypes("fr.fierdecoder.staticscriptengine.annotation.StaticScriptInvocator")
+@SupportedAnnotationTypes("org.staticscriptengine.annotation.StaticScriptInvocator")
 @SupportedSourceVersion(RELEASE_8)
 public class StaticScriptInvocatorProcessor extends AbstractProcessor {
     private final VelocityEngine velocityEngine;

@@ -1,7 +1,7 @@
-package fr.fierdecoder.staticscriptengine.generator;
+package org.staticscriptengine.generator;
 
-import fr.fierdecoder.staticscriptengine.annotation.FunctionName;
-import fr.fierdecoder.staticscriptengine.annotation.StaticScriptInvocator;
+import org.staticscriptengine.annotation.FunctionName;
+import org.staticscriptengine.annotation.StaticScriptInvocator;
 
 import javax.script.Invocable;
 import javax.script.ScriptEngine;

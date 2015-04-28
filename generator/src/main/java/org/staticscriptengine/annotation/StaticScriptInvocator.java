@@ -1,4 +1,4 @@
-package fr.fierdecoder.staticscriptengine.annotation;
+package org.staticscriptengine.annotation;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
