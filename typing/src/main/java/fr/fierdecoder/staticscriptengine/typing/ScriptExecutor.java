@@ -7,18 +7,18 @@ import java.util.Map;
 
 public class ScriptExecutor {
     private final Invocable invocable;
-    private final ScriptEngineResultConverter scriptEngineResultConverter;
+    private final ScriptEngineResultReader scriptEngineResultReader;
 
     public ScriptExecutor(Invocable invocable) {
         this.invocable = invocable;
-        scriptEngineResultConverter = new ScriptEngineResultConverter();
+        scriptEngineResultReader = new ScriptEngineResultReader();
     }
 
     public boolean returnBoolean() throws ScriptExecutorException {
         try {
             Object result = invocable.invokeFunction("returnBoolean");
-            return scriptEngineResultConverter.convertToType(result, Boolean.class);
-        } catch (ScriptException | NoSuchMethodException e) {
+            return scriptEngineResultReader.readToObject(result, Boolean.class);
+        } catch (ScriptException | NoSuchMethodException | ScriptEngineResultException e) {
             throw new ScriptExecutorException(e);
         }
     }
@@ -26,8 +26,8 @@ public class ScriptExecutor {
     public String returnString() throws ScriptExecutorException {
         try {
             Object result = invocable.invokeFunction("returnString");
-            return scriptEngineResultConverter.convertToType(result, String.class);
-        } catch (ScriptException | NoSuchMethodException e) {
+            return scriptEngineResultReader.readToObject(result, String.class);
+        } catch (ScriptException | NoSuchMethodException | ScriptEngineResultException e) {
             throw new ScriptExecutorException(e);
         }
     }
@@ -35,8 +35,8 @@ public class ScriptExecutor {
     public String returnBooleanAsString() throws ScriptExecutorException {
         try {
             Object result = invocable.invokeFunction("returnBoolean");
-            return scriptEngineResultConverter.convertToType(result, String.class);
-        } catch (ScriptException | NoSuchMethodException e) {
+            return scriptEngineResultReader.readToObject(result, String.class);
+        } catch (ScriptException | NoSuchMethodException | ScriptEngineResultException e) {
             throw new ScriptExecutorException(e);
         }
     }
@@ -44,8 +44,8 @@ public class ScriptExecutor {
     public String returnVoidAsString() {
         try {
             Object result = invocable.invokeFunction("returnVoid");
-            return scriptEngineResultConverter.convertToType(result, String.class);
-        } catch (ScriptException | NoSuchMethodException e) {
+            return scriptEngineResultReader.readToObject(result, String.class);
+        } catch (ScriptException | NoSuchMethodException | ScriptEngineResultException e) {
             throw new ScriptExecutorException(e);
         }
     }
@@ -53,8 +53,8 @@ public class ScriptExecutor {
     public List<String> returnStringArray() throws ScriptExecutorException {
         try {
             Object result = invocable.invokeFunction("returnStringArray");
-            return scriptEngineResultConverter.convertList(result, String.class);
-        } catch (ScriptException | NoSuchMethodException e) {
+            return scriptEngineResultReader.readAsList(result, String.class);
+        } catch (ScriptException | NoSuchMethodException | ScriptEngineResultException e) {
             throw new ScriptExecutorException(e);
         }
     }
@@ -62,8 +62,8 @@ public class ScriptExecutor {
     public List<Integer> returnIntegerArray() throws ScriptExecutorException {
         try {
             Object result = invocable.invokeFunction("returnIntegerArray");
-            return scriptEngineResultConverter.convertList(result, Integer.class);
-        } catch (ScriptException | NoSuchMethodException e) {
+            return scriptEngineResultReader.readAsList(result, Integer.class);
+        } catch (ScriptException | NoSuchMethodException | ScriptEngineResultException e) {
             throw new ScriptExecutorException(e);
         }
     }
@@ -71,8 +71,8 @@ public class ScriptExecutor {
     public Map<String, String> returnStringStringMap() throws ScriptExecutorException {
         try {
             Object result = invocable.invokeFunction("returnStringStringMap");
-            return scriptEngineResultConverter.convertMap(result, String.class, String.class);
-        } catch (ScriptException | NoSuchMethodException e) {
+            return scriptEngineResultReader.readAsMap(result, String.class, String.class);
+        } catch (ScriptException | NoSuchMethodException | ScriptEngineResultException e) {
             throw new ScriptExecutorException(e);
         }
     }
@@ -80,8 +80,8 @@ public class ScriptExecutor {
     public Map<String, Boolean> returnStringBooleanMap() throws ScriptExecutorException {
         try {
             Object result = invocable.invokeFunction("returnStringBooleanMap");
-            return scriptEngineResultConverter.convertMap(result, String.class, Boolean.class);
-        } catch (ScriptException | NoSuchMethodException e) {
+            return scriptEngineResultReader.readAsMap(result, String.class, Boolean.class);
+        } catch (ScriptException | NoSuchMethodException | ScriptEngineResultException e) {
             throw new ScriptExecutorException(e);
         }
     }
